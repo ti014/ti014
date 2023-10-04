@@ -1,5 +1,4 @@
 - 👋 Hi, I’m Ti
 - 👀 I’m interested in Ai, Web
-- 🌱 I’m currently learning Python, Django and SQL
-- 💞️ I’m looking to collaborate on Django
+- 🌱 I’m currently learning Python, JS and SQL
 - 📫 How to reach me email: pnmphuong2001@gmail.com
