@@ -1,7 +1,7 @@
 # Hi, I’m Timewo! <a href="https://emoji.gg/emoji/49262-kittycat"><img src="https://cdn3.emoji.gg/emojis/49262-kittycat.png" width="34px" height="34px" alt="KittyCat"></a>
 
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=fff&random=false&width=435&lines=In+it+to+win+it)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=fff&random=false&width=435&lines=Code.+Create.+Conquer.)](https://git.io/typing-svg)
 
 
 <a href=https://www.linkedin.com/in/phuong-phan-393114174/> <img src="https://img.shields.io/badge/-LinkedIn-0e76a8?style=plastic&logo=linkedIn"> </a> 
@@ -42,7 +42,7 @@ My full name is Phan Nguyen Mai Phuong, and I graduated with honors in Computer 
 </div>
 
 
-<img src="https://raw.githubusercontent.com/ti014/output/snake.svg" alt="Snake animation" />
+<img src="https://github.com/ti014/ti014/blob/output/snake.svg" alt="Snake animation" />
 
 ###
 
