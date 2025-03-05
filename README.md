@@ -7,7 +7,7 @@
 <a href=https://www.linkedin.com/in/phuong-phan-393114174/> <img src="https://img.shields.io/badge/-LinkedIn-0e76a8?style=plastic&logo=linkedIn"> </a> 
 <a href=https://www.facebook.com/ti014/> <img src="https://img.shields.io/badge/-Facebook-4267B2?style=plastic&logo=facebook"> </a> 
 
-My full name is Phan Nguyen Mai Phuong, and I graduated with distinction in Computer Science, majoring in Data Science, from the Industrial University of Ho Chi Minh City (IUH). Currently, I am working as an AI Software Engineer.
+My full name is Phan Nguyen Mai Phuong, and I graduated with very good in Computer Science, majoring in Data Science, from the Industrial University of Ho Chi Minh City (IUH). Currently, I am working as an AI Software Engineer.
 
 ## 🛠 &nbsp;Tech Stacks
 
