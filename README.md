@@ -37,6 +37,10 @@ My full name is Phan Nguyen Mai Phuong. I graduated with a “Very Good” disti
         <b>[TOOL] ImageProcessor</b><br />
         <a href="https://github.com/ti014/ImageProcessor">Link</a>
       </td>
+      <td align="center">
+        <b>[TOOL] IDM Activator</b><br />
+        <a href="https://github.com/ti014/IDM-Activator-Tool">Link</a>
+      </td>
     </tr>
   </table>
 </div>
