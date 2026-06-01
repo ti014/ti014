@@ -12,38 +12,96 @@
 
 My full name is Phan Nguyen Mai Phuong. I graduated with a “Very Good” distinction in Computer Science, majoring in Data Science, from the Industrial University of Ho Chi Minh City (IUH). Currently, I am working as an AI Software Engineer and pursuing a Master’s degree in Computer Science.
 
-## 🛠 &nbsp;Tech Stacks
+## 🛠 &nbsp;Tech Stack
 
+### Languages
 ![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)&nbsp;
+![TypeScript](https://img.shields.io/badge/-TypeScript-05122A?style=flat&logo=typescript)&nbsp;
+![LaTeX](https://img.shields.io/badge/-LaTeX-05122A?style=flat&logo=latex)&nbsp;
+![SQL](https://img.shields.io/badge/-SQL-05122A?style=flat&logo=postgresql)&nbsp;
+
+### AI / ML / Data Science
+![PyTorch](https://img.shields.io/badge/-PyTorch-05122A?style=flat&logo=pytorch)&nbsp;
+![TensorFlow](https://img.shields.io/badge/-TensorFlow-05122A?style=flat&logo=tensorflow)&nbsp;
+![TensorRT](https://img.shields.io/badge/-TensorRT-05122A?style=flat&logo=nvidia)&nbsp;
+![HuggingFace](https://img.shields.io/badge/-HuggingFace-05122A?style=flat&logo=huggingface)&nbsp;
+![scikit--learn](https://img.shields.io/badge/-scikit--learn-05122A?style=flat&logo=scikit-learn)&nbsp;
+![OpenCV](https://img.shields.io/badge/-OpenCV-05122A?style=flat&logo=opencv)&nbsp;
+![ONNX](https://img.shields.io/badge/-ONNX-05122A?style=flat&logo=onnx)&nbsp;
+![Pandas](https://img.shields.io/badge/-Pandas-05122A?style=flat&logo=pandas)&nbsp;
+![NumPy](https://img.shields.io/badge/-NumPy-05122A?style=flat&logo=numpy)&nbsp;
+![Jupyter](https://img.shields.io/badge/-Jupyter-05122A?style=flat&logo=jupyter)&nbsp;
+
+### Tools & Infra
 ![Docker](https://img.shields.io/badge/-Docker-05122A?style=flat&logo=docker)&nbsp;
-![n8n](https://img.shields.io/badge/-n8n-05122A?style=flat&logo=n8n)
+![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
+![Linux](https://img.shields.io/badge/-Linux-05122A?style=flat&logo=linux)&nbsp;
+![n8n](https://img.shields.io/badge/-n8n-05122A?style=flat&logo=n8n)&nbsp;
 ![Vue.js](https://img.shields.io/badge/-Vue.js-05122A?style=flat&logo=vue.js)&nbsp;
 
-## ⚙ Framework
-![Pytorch](https://img.shields.io/badge/-Pytorch-05122A?style=flat&logo=pytorch)&nbsp;
+
+## 🧠 Featured AI / ML Projects
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🏦 VFL Split-NN Bancassurance</h3>
+      <p>Vertical Federated Learning with Split Neural Network for cross-silo bancassurance modeling.</p>
+      <a href="https://github.com/ti014/vfl-splitnn-bancassurance"><img src="https://img.shields.io/badge/Repo-vfl--splitnn--bancassurance-05122A?style=flat&logo=github" /></a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🛡 Adversarial Robustness of Deep Learning</h3>
+      <p>Study of adversarial attacks and defenses on deep neural networks.</p>
+      <a href="https://github.com/ti014/Adversarial-Robustness-of-Deep-Learning"><img src="https://img.shields.io/badge/Repo-Adversarial--Robustness-05122A?style=flat&logo=github" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>📹 Semantic Surveillance</h3>
+      <p>Semantic understanding pipeline for surveillance video analytics.</p>
+      <a href="https://github.com/ti014/semantic_surveillance"><img src="https://img.shields.io/badge/Repo-semantic__surveillance-05122A?style=flat&logo=github" /></a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>⚡ TensorRT Fall Detection</h3>
+      <p>Optimized real-time fall detection using TensorRT inference.</p>
+      <a href="https://github.com/ti014/optmz_TensorRT_FallDetect"><img src="https://img.shields.io/badge/Repo-optmz__TensorRT__FallDetect-05122A?style=flat&logo=github" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🎯 Session-Based Recommender System</h3>
+      <p>Session-based RS research project with full LaTeX report.</p>
+      <a href="https://github.com/ti014/Session_Based_RS_Project"><img src="https://img.shields.io/badge/Repo-Session__Based__RS-05122A?style=flat&logo=github" /></a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>📊 Bank Churn Statistical Analysis</h3>
+      <p>Statistical analysis & ML modeling on bank customer churn.</p>
+      <a href="https://github.com/ti014/bank-churn-statistical-analysis"><img src="https://img.shields.io/badge/Repo-bank--churn--analysis-05122A?style=flat&logo=github" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🤝 Federated Bancassurance</h3>
+      <p>Federated learning framework for bancassurance use case.</p>
+      <a href="https://github.com/ti014/federated_bancassurance"><img src="https://img.shields.io/badge/Repo-federated__bancassurance-05122A?style=flat&logo=github" /></a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🏷 OCRLabeler</h3>
+      <p>OCR data annotation tool for text recognition training pipelines.</p>
+      <a href="https://github.com/ti014/OCRLabeler"><img src="https://img.shields.io/badge/Repo-OCRLabeler-05122A?style=flat&logo=github" /></a>
+    </td>
+  </tr>
+</table>
 
 
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ti014&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" height="180" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ti014&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" height="180" />
-</p>
+## 🔥 Activity
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=ti014&theme=tokyonight&hide_border=true" alt="Streak Stats" />
 </p>
 
-## 🏆 Trophies
-
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ti014&theme=tokyonight&no-frame=true&row=1&column=7" alt="Trophies" />
-</p>
-
-## 📈 Activity Graph
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ti014&theme=tokyo-night&hide_border=true" alt="Activity Graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ti014&theme=tokyo-night&hide_border=true&area=true" alt="Activity Graph" />
 </p>
 
 ## 💭 Dev Quote
