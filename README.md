@@ -42,56 +42,58 @@ My full name is Phan Nguyen Mai Phuong. I graduated with a “Very Good” disti
 
 ## 🧠 Featured AI / ML Projects
 
+<!-- FEATURED:START -->
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>🏦 VFL Split-NN Bancassurance</h3>
-      <p>Vertical Federated Learning with Split Neural Network for cross-silo bancassurance modeling.</p>
-      <a href="https://github.com/ti014/vfl-splitnn-bancassurance"><img src="https://img.shields.io/badge/Repo-vfl--splitnn--bancassurance-05122A?style=flat&logo=github" /></a>
+      <h3>🎯 Session Based RS Project</h3>
+      <p><code>TeX</code></p>
+      <a href="https://github.com/ti014/Session_Based_RS_Project"><img src="https://img.shields.io/badge/Repo-Session__Based__RS__Project-05122A?style=flat&logo=github" /></a>
     </td>
     <td width="50%" valign="top">
+      <h3>🤝 VFL Splitnn Bancassurance</h3>
+      <p><code>Python</code></p>
+      <a href="https://github.com/ti014/vfl-splitnn-bancassurance"><img src="https://img.shields.io/badge/Repo-vfl--splitnn--bancassurance-05122A?style=flat&logo=github" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
       <h3>🛡 Adversarial Robustness of Deep Learning</h3>
-      <p>Study of adversarial attacks and defenses on deep neural networks.</p>
-      <a href="https://github.com/ti014/Adversarial-Robustness-of-Deep-Learning"><img src="https://img.shields.io/badge/Repo-Adversarial--Robustness-05122A?style=flat&logo=github" /></a>
+      <p><code>Jupyter Notebook</code></p>
+      <a href="https://github.com/ti014/Adversarial-Robustness-of-Deep-Learning"><img src="https://img.shields.io/badge/Repo-Adversarial--Robustness--of--Deep--Learning-05122A?style=flat&logo=github" /></a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🏷 OCR Labeler</h3>
+      <p><code>Python</code></p>
+      <a href="https://github.com/ti014/OCRLabeler"><img src="https://img.shields.io/badge/Repo-OCRLabeler-05122A?style=flat&logo=github" /></a>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3>📹 Semantic Surveillance</h3>
-      <p>Semantic understanding pipeline for surveillance video analytics.</p>
+      <p><code>Jupyter Notebook</code></p>
       <a href="https://github.com/ti014/semantic_surveillance"><img src="https://img.shields.io/badge/Repo-semantic__surveillance-05122A?style=flat&logo=github" /></a>
     </td>
     <td width="50%" valign="top">
-      <h3>⚡ TensorRT Fall Detection</h3>
-      <p>Optimized real-time fall detection using TensorRT inference.</p>
-      <a href="https://github.com/ti014/optmz_TensorRT_FallDetect"><img src="https://img.shields.io/badge/Repo-optmz__TensorRT__FallDetect-05122A?style=flat&logo=github" /></a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🎯 Session-Based Recommender System</h3>
-      <p>Session-based RS research project with full LaTeX report.</p>
-      <a href="https://github.com/ti014/Session_Based_RS_Project"><img src="https://img.shields.io/badge/Repo-Session__Based__RS-05122A?style=flat&logo=github" /></a>
-    </td>
-    <td width="50%" valign="top">
       <h3>📊 Bank Churn Statistical Analysis</h3>
-      <p>Statistical analysis & ML modeling on bank customer churn.</p>
-      <a href="https://github.com/ti014/bank-churn-statistical-analysis"><img src="https://img.shields.io/badge/Repo-bank--churn--analysis-05122A?style=flat&logo=github" /></a>
+      <p><code>Jupyter Notebook</code></p>
+      <a href="https://github.com/ti014/bank-churn-statistical-analysis"><img src="https://img.shields.io/badge/Repo-bank--churn--statistical--analysis-05122A?style=flat&logo=github" /></a>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>🤝 Federated Bancassurance</h3>
-      <p>Federated learning framework for bancassurance use case.</p>
-      <a href="https://github.com/ti014/federated_bancassurance"><img src="https://img.shields.io/badge/Repo-federated__bancassurance-05122A?style=flat&logo=github" /></a>
+      <h3>🛠 IDM Activator Tool</h3>
+      <p><code>Batchfile</code> ⭐ 1</p>
+      <a href="https://github.com/ti014/IDM-Activator-Tool"><img src="https://img.shields.io/badge/Repo-IDM--Activator--Tool-05122A?style=flat&logo=github" /></a>
     </td>
     <td width="50%" valign="top">
-      <h3>🏷 OCRLabeler</h3>
-      <p>OCR data annotation tool for text recognition training pipelines.</p>
-      <a href="https://github.com/ti014/OCRLabeler"><img src="https://img.shields.io/badge/Repo-OCRLabeler-05122A?style=flat&logo=github" /></a>
+      <h3>📄 Latex Report Template</h3>
+      <p><code>Batchfile</code></p>
+      <a href="https://github.com/ti014/latex-report-template"><img src="https://img.shields.io/badge/Repo-latex--report--template-05122A?style=flat&logo=github" /></a>
     </td>
   </tr>
 </table>
+<!-- FEATURED:END -->
 
 
 ## 🔥 Activity
