@@ -46,7 +46,5 @@ My full name is Phan Nguyen Mai Phuong. I graduated with a “Very Good” disti
 </div>
 
 
-<img src="https://github.com/ti014/ti014/blob/output/snake.svg" alt="Snake animation" />
-
 ###
 
