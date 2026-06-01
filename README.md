@@ -99,7 +99,7 @@ My full name is Phan Nguyen Mai Phuong. I graduated with a “Very Good” disti
 ## 🔥 Activity
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=ti014&theme=tokyonight&hide_border=true&v=2" alt="Streak Stats" />
+  <img src="https://streak-stats.demolab.com/?user=ti014&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="Streak Stats" />
 </p>
 
 <p align="center">
