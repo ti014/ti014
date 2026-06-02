@@ -99,11 +99,11 @@ My full name is Phan Nguyen Mai Phuong. I graduated with a “Very Good” disti
 ## 🔥 Activity
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=ti014&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="Streak Stats" />
+  <img src="https://streak-stats.demolab.com/?user=ti014&theme=tokyonight&hide_border=true&card_width=495&background=1a1b27" alt="Streak Stats" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ti014&theme=tokyo-night&hide_border=true&area=true&v=2" alt="Activity Graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ti014&theme=tokyo-night&hide_border=true&area=true&radius=8&height=300" alt="Activity Graph" />
 </p>
 
 ## 💭 Dev Quote
