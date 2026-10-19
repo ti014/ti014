@@ -12,6 +12,8 @@
 
 My full name is Phan Nguyen Mai Phuong. I graduated with a “Very Good” distinction in Computer Science, majoring in Data Science, from the Industrial University of Ho Chi Minh City (IUH). Currently, I am working as an AI Software Engineer and pursuing a Master’s degree in Computer Science.
 
+I am also interested in IoT and ESP32, enjoy using Linux, and like reading on Kindle.
+
 ## 🛠 &nbsp;Tech Stack
 
 ### Languages
@@ -32,12 +34,15 @@ My full name is Phan Nguyen Mai Phuong. I graduated with a “Very Good” disti
 ![NumPy](https://img.shields.io/badge/-NumPy-05122A?style=flat&logo=numpy)&nbsp;
 ![Jupyter](https://img.shields.io/badge/-Jupyter-05122A?style=flat&logo=jupyter)&nbsp;
 
-### Tools & Infra
+## Tools & Devices
 ![Docker](https://img.shields.io/badge/-Docker-05122A?style=flat&logo=docker)&nbsp;
 ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
 ![Linux](https://img.shields.io/badge/-Linux-05122A?style=flat&logo=linux)&nbsp;
+![ESP32](https://img.shields.io/badge/-ESP32-05122A?style=flat&logo=espressif)&nbsp;
 ![n8n](https://img.shields.io/badge/-n8n-05122A?style=flat&logo=n8n)&nbsp;
 ![Vue.js](https://img.shields.io/badge/-Vue.js-05122A?style=flat&logo=vue.js)&nbsp;
+
+Kindle
 
 
 ## 🧠 Featured AI / ML Projects
