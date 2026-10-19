@@ -10,9 +10,7 @@
 <a href=https://www.facebook.com/ti014/> <img src="https://img.shields.io/badge/-Facebook-4267B2?style=plastic&logo=facebook"> </a> 
 <a href=https://www.youtube.com/@TiMaclife> <img src="https://img.shields.io/youtube/channel/views/UCJHCRBOnzsNR5_zWB_w5BYA"> </a>
 
-My full name is Phan Nguyen Mai Phuong. I graduated with a “Very Good” distinction in Computer Science, majoring in Data Science, from the Industrial University of Ho Chi Minh City (IUH). Currently, I am working as an AI Software Engineer and pursuing a Master’s degree in Computer Science.
-
-I am also interested in IoT and ESP32, enjoy using Linux, and like reading on Kindle.
+I’m Phan Nguyen Mai Phuong, an AI Software Engineer currently pursuing a Master’s degree in Computer Science. Beyond AI, I enjoy exploring IoT with ESP32, working with Linux, and reading on my Kindle.
 
 ## 🛠 &nbsp;Tech Stack
 
