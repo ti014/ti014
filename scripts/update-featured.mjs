@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 
 const USER = "ti014";
-const PER_CATEGORY = 4;
+const CATEGORY_LIMITS = new Map([["AI / ML", 4], ["Tools & Apps", 2], ["IoT & Embedded", 2]]);
 const README = "README.md";
 const START = "<!-- FEATURED:START -->";
 const END = "<!-- FEATURED:END -->";
@@ -14,7 +14,6 @@ const CATEGORY_RULES = [
   ["AI / ML", /\b(?:ai|ml|machine[-_ ]learning|deep[-_ ]learning|computer[-_ ]vision|data[-_ ]science|federat\w*|split[-_ ]?nn|vfl|adversarial|robust\w*|surveil\w*|detect\w*|yolo\w*|tensorrt|onnx|inference|recommend\w*|session[-_ ]based|rs|churn|statistical|analysis|eda|ocr\w*|llms?|rag|agents?|gpt\w*|regress\w*|classif\w*|cluster\w*|nlp|bert|huggingface)\b/i],
   ["Tools & Apps", /\b(?:developer[-_ ]tools|tools?|util\w*|cli|scripts?|extensions?|browsers?|apps?|bots?|web|vue|react|next|frontend|tkinter|linux|kindle)\b/i],
 ];
-const CATEGORY_ORDER = ["AI / ML", "Tools & Apps", "IoT & Embedded", "Other Projects"];
 
 export const classifyRepo = (repo) => {
   const topics = (repo.topics ?? []).join(" ");
@@ -25,14 +24,23 @@ export const classifyRepo = (repo) => {
   return CATEGORY_RULES.find(([, rule]) => rule.test(text))?.[0] ?? "Other Projects";
 };
 
-export const groupRepos = (repos) => {
+export const groupRepos = (repos, now = Date.now()) => {
+  // Featured lists recent source projects; templates, exercises and release mirrors add noise.
+  const cutoff = now - 730 * 24 * 60 * 60 * 1000;
   const eligible = repos
-    .filter((r) => !r.fork && !r.archived && !r.private && !EXCLUDE.has(r.name))
-    .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
-  const groups = new Map(CATEGORY_ORDER.map((category) => [category, []]));
+    .filter((r) => !r.fork && !r.archived && !r.private && !r.is_template && !EXCLUDE.has(r.name)
+      && r.size > 0 && r.language && !["TeX", "Rich Text Format", "Markdown"].includes(r.language)
+      && new Date(r.pushed_at).getTime() >= cutoff
+      && !/template|tutorial|homework|exercise|(?:^|[-_])(?:hw\d*|releases?)(?:$|[-_])/i.test(r.name))
+    .sort((a, b) => Number(Boolean(b.description?.trim())) - Number(Boolean(a.description?.trim()))
+      || (b.stargazers_count ?? 0) - (a.stargazers_count ?? 0)
+      || new Date(b.pushed_at) - new Date(a.pushed_at)
+      || a.name.localeCompare(b.name));
+  const groups = new Map([...CATEGORY_LIMITS.keys()].map((category) => [category, []]));
   for (const repo of eligible) {
-    const group = groups.get(classifyRepo(repo));
-    if (group.length < PER_CATEGORY) group.push(repo);
+    const category = classifyRepo(repo);
+    const group = groups.get(category);
+    if (group && group.length < CATEGORY_LIMITS.get(category)) group.push(repo);
   }
   return [...groups].filter(([, repos]) => repos.length > 0);
 };
@@ -73,29 +81,12 @@ const fetchRepos = async () => {
   return res.json();
 };
 
-const renderCell = (repo) => {
-  const title = prettifyName(repo.name);
-  const desc = repo.description?.trim();
-  const lang = repo.language ? `<code>${repo.language}</code>` : "";
-  const stars = repo.stargazers_count ? ` Stars: ${repo.stargazers_count}` : "";
-  const meta = (lang || stars) ? `<p>${lang}${stars}</p>` : "";
-  const descBlock = desc ? `<p>${desc}</p>` : "";
-  const badgeName = repo.name.replace(/-/g, "--").replace(/_/g, "__");
-  return `    <td width="50%" valign="top">
-      <h3>${title}</h3>
-${descBlock}${meta}
-      <a href="https://github.com/${USER}/${repo.name}"><img src="https://img.shields.io/badge/Repo-${badgeName}-05122A?style=flat&logo=github" /></a>
-    </td>`;
-};
+const escapeMarkdown = (text) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/[\\`*_[\]{}]/g, "\\$&");
 
-const renderTable = (repos) => {
-  const rows = [];
-  for (let i = 0; i < repos.length; i += 2) {
-    const a = renderCell(repos[i]);
-    const b = repos[i + 1] ? renderCell(repos[i + 1]) : `    <td width="50%"></td>`;
-    rows.push(`  <tr>\n${a}\n${b}\n  </tr>`);
-  }
-  return `<table>\n${rows.join("\n")}\n</table>`;
+export const renderProject = (repo) => {
+  let detail = (repo.description?.trim() || repo.language || "").replace(/\s+/g, " ");
+  if (detail.length > 140) detail = `${detail.slice(0, 137).replace(/\s+\S*$/, "")}...`;
+  return `- **[${escapeMarkdown(prettifyName(repo.name))}](https://github.com/${USER}/${encodeURIComponent(repo.name)})**${detail ? ` — ${escapeMarkdown(detail)}` : ""}`;
 };
 
 const main = async () => {
@@ -107,7 +98,7 @@ const main = async () => {
     process.exit(1);
   }
 
-  const sections = groups.map(([category, repos]) => `### ${category}\n\n${renderTable(repos)}`).join("\n\n");
+  const sections = groups.map(([category, repos]) => `### ${category}\n\n${repos.map(renderProject).join("\n")}`).join("\n\n");
   const readme = readFileSync(README, "utf8");
   const startIdx = readme.indexOf(START);
   const endIdx = readme.indexOf(END);
