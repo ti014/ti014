@@ -1,33 +1,40 @@
 import { readFileSync, writeFileSync } from "node:fs";
+import { pathToFileURL } from "node:url";
 
 const USER = "ti014";
-const TOP_N = 8;
+const PER_CATEGORY = 4;
 const README = "README.md";
 const START = "<!-- FEATURED:START -->";
 const END = "<!-- FEATURED:END -->";
 
 const EXCLUDE = new Set([USER, `${USER}.github.io`]);
 
-const EMOJI_RULES = [
-  [/federat|split.?nn|vfl/i, "🤝"],
-  [/adversarial|robust/i, "🛡"],
-  [/surveil|video|camera|detect|yolo|fall/i, "📹"],
-  [/tensorrt|onnx|optim|quant|inference/i, "⚡"],
-  [/recommend|session.?based|rs[-_ ]/i, "🎯"],
-  [/churn|statistical|analysis|eda/i, "📊"],
-  [/ocr|label|annota/i, "🏷"],
-  [/llm|rag|agent|chat|gpt/i, "🤖"],
-  [/regress|classif|cluster|gauss|bayes/i, "📈"],
-  [/nlp|text|bert|tokeni/i, "📝"],
-  [/latex|report|paper|thesis/i, "📄"],
-  [/web|vue|react|next|frontend/i, "🌐"],
-  [/tool|util|cli|script/i, "🛠"],
+const CATEGORY_RULES = [
+  ["IoT & Embedded", /\b(?:iot|esp32(?:[-_ ]?[cs]\d)?|esp8266|arduino|platformio|embedded|firmware|microcontroller|macropad|raspberry[-_ ]?pi)\b/i],
+  ["AI / ML", /\b(?:ai|ml|machine[-_ ]learning|deep[-_ ]learning|computer[-_ ]vision|data[-_ ]science|federat\w*|split[-_ ]?nn|vfl|adversarial|robust\w*|surveil\w*|detect\w*|yolo\w*|tensorrt|onnx|inference|recommend\w*|session[-_ ]based|rs|churn|statistical|analysis|eda|ocr\w*|llms?|rag|agents?|gpt\w*|regress\w*|classif\w*|cluster\w*|nlp|bert|huggingface)\b/i],
+  ["Tools & Apps", /\b(?:developer[-_ ]tools|tools?|util\w*|cli|scripts?|extensions?|browsers?|apps?|bots?|web|vue|react|next|frontend|tkinter|linux|kindle)\b/i],
 ];
+const CATEGORY_ORDER = ["AI / ML", "Tools & Apps", "IoT & Embedded", "Other Projects"];
 
-const pickEmoji = (name, desc = "") => {
-  const hay = `${name} ${desc}`;
-  for (const [re, em] of EMOJI_RULES) if (re.test(hay)) return em;
-  return "🧪";
+export const classifyRepo = (repo) => {
+  const topics = (repo.topics ?? []).join(" ");
+  const fromTopics = CATEGORY_RULES.find(([, rule]) => rule.test(topics));
+  if (fromTopics) return fromTopics[0];
+  // shortcut: names/descriptions are heuristic; add GitHub topics to correct ambiguous repos.
+  const text = `${repo.name} ${repo.description ?? ""}`.replace(/_/g, " ");
+  return CATEGORY_RULES.find(([, rule]) => rule.test(text))?.[0] ?? "Other Projects";
+};
+
+export const groupRepos = (repos) => {
+  const eligible = repos
+    .filter((r) => !r.fork && !r.archived && !r.private && !EXCLUDE.has(r.name))
+    .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+  const groups = new Map(CATEGORY_ORDER.map((category) => [category, []]));
+  for (const repo of eligible) {
+    const group = groups.get(classifyRepo(repo));
+    if (group.length < PER_CATEGORY) group.push(repo);
+  }
+  return [...groups].filter(([, repos]) => repos.length > 0);
 };
 
 const ACRONYMS = new Set([
@@ -67,17 +74,16 @@ const fetchRepos = async () => {
 };
 
 const renderCell = (repo) => {
-  const emoji = pickEmoji(repo.name, repo.description ?? "");
   const title = prettifyName(repo.name);
   const desc = repo.description?.trim();
   const lang = repo.language ? `<code>${repo.language}</code>` : "";
-  const stars = repo.stargazers_count ? ` ⭐ ${repo.stargazers_count}` : "";
+  const stars = repo.stargazers_count ? ` Stars: ${repo.stargazers_count}` : "";
   const meta = (lang || stars) ? `<p>${lang}${stars}</p>` : "";
   const descBlock = desc ? `<p>${desc}</p>` : "";
   const badgeName = repo.name.replace(/-/g, "--").replace(/_/g, "__");
   return `    <td width="50%" valign="top">
-      <h3>${emoji} ${title}</h3>
-      ${descBlock}${meta}
+      <h3>${title}</h3>
+${descBlock}${meta}
       <a href="https://github.com/${USER}/${repo.name}"><img src="https://img.shields.io/badge/Repo-${badgeName}-05122A?style=flat&logo=github" /></a>
     </td>`;
 };
@@ -94,35 +100,34 @@ const renderTable = (repos) => {
 
 const main = async () => {
   const all = await fetchRepos();
-  const picked = all
-    .filter((r) => !r.fork && !r.archived && !r.private && !EXCLUDE.has(r.name))
-    .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
-    .slice(0, TOP_N);
+  const groups = groupRepos(all);
 
-  if (picked.length === 0) {
+  if (groups.length === 0) {
     console.error("No repos matched filters");
     process.exit(1);
   }
 
-  const table = renderTable(picked);
+  const sections = groups.map(([category, repos]) => `### ${category}\n\n${renderTable(repos)}`).join("\n\n");
   const readme = readFileSync(README, "utf8");
   const startIdx = readme.indexOf(START);
   const endIdx = readme.indexOf(END);
-  if (startIdx === -1 || endIdx === -1) throw new Error("Markers not found in README");
+  if (startIdx === -1 || endIdx < startIdx) throw new Error("Invalid FEATURED markers in README");
 
   const before = readme.slice(0, startIdx + START.length);
   const after = readme.slice(endIdx);
-  const next = `${before}\n${table}\n${after}`;
+  const next = `${before}\n${sections}\n${after}`;
 
   if (next === readme) {
     console.log("No changes.");
     return;
   }
   writeFileSync(README, next);
-  console.log(`Updated README with ${picked.length} repos.`);
+  console.log(`Updated README with ${groups.reduce((count, [, repos]) => count + repos.length, 0)} repos across ${groups.length} categories.`);
 };
 
-main().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
+}

@@ -45,56 +45,109 @@ I am also interested in IoT and ESP32, enjoy using Linux, and like reading on Ki
 Kindle
 
 
-## 🧠 Featured AI / ML Projects
+## Featured Projects
+
+Public, non-fork, active repositories grouped by GitHub topics, with names and descriptions as a fallback. Each group shows up to four repositories by latest push; empty groups are hidden.
+
+Use topics such as `machine-learning`, `developer-tools`, or `esp32` to set a category explicitly.
 
 <!-- FEATURED:START -->
+### AI / ML
+
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>🧪 Translate Vn Extension Releases</h3>
-      <p>Public update metadata and Edge extension binaries for Bilingual Learning Translator</p>
+      <h3>Session Based RS Project</h3>
+<p><code>TeX</code></p>
+      <a href="https://github.com/ti014/Session_Based_RS_Project"><img src="https://img.shields.io/badge/Repo-Session__Based__RS__Project-05122A?style=flat&logo=github" /></a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>VFL Splitnn Bancassurance</h3>
+<p><code>Python</code></p>
+      <a href="https://github.com/ti014/vfl-splitnn-bancassurance"><img src="https://img.shields.io/badge/Repo-vfl--splitnn--bancassurance-05122A?style=flat&logo=github" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Adversarial Robustness of Deep Learning</h3>
+<p><code>Jupyter Notebook</code></p>
+      <a href="https://github.com/ti014/Adversarial-Robustness-of-Deep-Learning"><img src="https://img.shields.io/badge/Repo-Adversarial--Robustness--of--Deep--Learning-05122A?style=flat&logo=github" /></a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>OCR Labeler</h3>
+<p><code>Python</code></p>
+      <a href="https://github.com/ti014/OCRLabeler"><img src="https://img.shields.io/badge/Repo-OCRLabeler-05122A?style=flat&logo=github" /></a>
+    </td>
+  </tr>
+</table>
+
+### Tools & Apps
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Translate Vn Extension Releases</h3>
+<p>Public update metadata and Edge extension binaries for Bilingual Learning Translator</p>
       <a href="https://github.com/ti014/translate-vn-extension-releases"><img src="https://img.shields.io/badge/Repo-translate--vn--extension--releases-05122A?style=flat&logo=github" /></a>
     </td>
     <td width="50%" valign="top">
-      <h3>🎯 Session Based RS Project</h3>
-      <p><code>TeX</code></p>
-      <a href="https://github.com/ti014/Session_Based_RS_Project"><img src="https://img.shields.io/badge/Repo-Session__Based__RS__Project-05122A?style=flat&logo=github" /></a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🤝 VFL Splitnn Bancassurance</h3>
-      <p><code>Python</code></p>
-      <a href="https://github.com/ti014/vfl-splitnn-bancassurance"><img src="https://img.shields.io/badge/Repo-vfl--splitnn--bancassurance-05122A?style=flat&logo=github" /></a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🛡 Adversarial Robustness of Deep Learning</h3>
-      <p><code>Jupyter Notebook</code></p>
-      <a href="https://github.com/ti014/Adversarial-Robustness-of-Deep-Learning"><img src="https://img.shields.io/badge/Repo-Adversarial--Robustness--of--Deep--Learning-05122A?style=flat&logo=github" /></a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🏷 OCR Labeler</h3>
-      <p><code>Python</code></p>
-      <a href="https://github.com/ti014/OCRLabeler"><img src="https://img.shields.io/badge/Repo-OCRLabeler-05122A?style=flat&logo=github" /></a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>📹 Semantic Surveillance</h3>
-      <p><code>Jupyter Notebook</code></p>
-      <a href="https://github.com/ti014/semantic_surveillance"><img src="https://img.shields.io/badge/Repo-semantic__surveillance-05122A?style=flat&logo=github" /></a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>📊 Bank Churn Statistical Analysis</h3>
-      <p><code>Jupyter Notebook</code></p>
-      <a href="https://github.com/ti014/bank-churn-statistical-analysis"><img src="https://img.shields.io/badge/Repo-bank--churn--statistical--analysis-05122A?style=flat&logo=github" /></a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🛠 IDM Activator Tool</h3>
-      <p><code>Batchfile</code> ⭐ 1</p>
+      <h3>IDM Activator Tool</h3>
+<p><code>Batchfile</code> Stars: 1</p>
       <a href="https://github.com/ti014/IDM-Activator-Tool"><img src="https://img.shields.io/badge/Repo-IDM--Activator--Tool-05122A?style=flat&logo=github" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Cookiecutter Tkinter App Template</h3>
+<p><code>Python</code></p>
+      <a href="https://github.com/ti014/cookiecutter-tkinter-app-template"><img src="https://img.shields.io/badge/Repo-cookiecutter--tkinter--app--template-05122A?style=flat&logo=github" /></a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Extension</h3>
+
+      <a href="https://github.com/ti014/Extension"><img src="https://img.shields.io/badge/Repo-Extension-05122A?style=flat&logo=github" /></a>
+    </td>
+  </tr>
+</table>
+
+### IoT & Embedded
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Timewo Macropad</h3>
+<p>ESP32 BLE macropad: one firmware for many boards (C3/S3/ESP32), Windows app to configure keys, rename, remap GPIO and flash firmware</p><p><code>Python</code></p>
+      <a href="https://github.com/ti014/timewo-macropad"><img src="https://img.shields.io/badge/Repo-timewo--macropad-05122A?style=flat&logo=github" /></a>
+    </td>
+    <td width="50%"></td>
+  </tr>
+</table>
+
+### Other Projects
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Latex Report Template</h3>
+<p><code>Batchfile</code></p>
+      <a href="https://github.com/ti014/latex-report-template"><img src="https://img.shields.io/badge/Repo-latex--report--template-05122A?style=flat&logo=github" /></a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Terminus Pre</h3>
+<p><code>Python</code></p>
+      <a href="https://github.com/ti014/TerminusPre"><img src="https://img.shields.io/badge/Repo-TerminusPre-05122A?style=flat&logo=github" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Python Tutorial</h3>
+<p><code>Python</code></p>
+      <a href="https://github.com/ti014/PythonTutorial"><img src="https://img.shields.io/badge/Repo-PythonTutorial-05122A?style=flat&logo=github" /></a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Lucky Draw</h3>
+<p><code>Python</code></p>
+      <a href="https://github.com/ti014/LuckyDraw"><img src="https://img.shields.io/badge/Repo-LuckyDraw-05122A?style=flat&logo=github" /></a>
     </td>
   </tr>
 </table>
