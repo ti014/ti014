@@ -50,10 +50,10 @@ A selection of my public work in AI, developer tools, and embedded systems.
 <!-- FEATURED:START -->
 ### AI / ML
 
+- **[Tinasa Cmapss Rul Prediction](https://github.com/ti014/tinasa-cmapss-rul-prediction)** — Jupyter Notebook
 - **[VFL Splitnn Bancassurance](https://github.com/ti014/vfl-splitnn-bancassurance)** — Python
 - **[Adversarial Robustness of Deep Learning](https://github.com/ti014/Adversarial-Robustness-of-Deep-Learning)** — Jupyter Notebook
 - **[OCR Labeler](https://github.com/ti014/OCRLabeler)** — Python
-- **[Semantic Surveillance](https://github.com/ti014/semantic_surveillance)** — Jupyter Notebook
 
 ### Tools & Apps
 

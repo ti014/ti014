@@ -11,7 +11,7 @@ const EXCLUDE = new Set([USER, `${USER}.github.io`]);
 
 const CATEGORY_RULES = [
   ["IoT & Embedded", /\b(?:iot|esp32(?:[-_ ]?[cs]\d)?|esp8266|arduino|platformio|embedded|firmware|microcontroller|macropad|raspberry[-_ ]?pi)\b/i],
-  ["AI / ML", /\b(?:ai|ml|machine[-_ ]learning|deep[-_ ]learning|computer[-_ ]vision|data[-_ ]science|federat\w*|split[-_ ]?nn|vfl|adversarial|robust\w*|surveil\w*|detect\w*|yolo\w*|tensorrt|onnx|inference|recommend\w*|session[-_ ]based|rs|churn|statistical|analysis|eda|ocr\w*|llms?|rag|agents?|gpt\w*|regress\w*|classif\w*|cluster\w*|nlp|bert|huggingface)\b/i],
+  ["AI / ML", /\b(?:ai|ml|machine[-_ ]learning|deep[-_ ]learning|computer[-_ ]vision|data[-_ ]science|federat\w*|split[-_ ]?nn|vfl|adversarial|robust\w*|surveil\w*|detect\w*|yolo\w*|tensorrt|onnx|inference|recommend\w*|session[-_ ]based|rs|churn|statistical|analysis|eda|ocr\w*|llms?|rag|agents?|gpt\w*|regress\w*|classif\w*|cluster\w*|nlp|bert|huggingface|rul|cmapss|predict\w*)\b/i],
   ["Tools & Apps", /\b(?:developer[-_ ]tools|tools?|util\w*|cli|scripts?|extensions?|browsers?|apps?|bots?|web|vue|react|next|frontend|tkinter|linux|kindle)\b/i],
 ];
 

@@ -13,6 +13,7 @@ test("topics take priority; names and descriptions provide a fallback", () => {
     [{ name: "OCRLabeler" }, "AI / ML"],
     [{ name: "semantic_surveillance" }, "AI / ML"],
     [{ name: "bank-churn-statistical-analysis" }, "AI / ML"],
+    [{ name: "tinasa-cmapss-rul-prediction" }, "AI / ML"],
     [{ name: "translate-vn-extension-releases" }, "Tools & Apps"],
     [{ name: "IDM-Activator-Tool" }, "Tools & Apps"],
     [{ name: "demo", description: "ESP32 firmware" }, "IoT & Embedded"],
